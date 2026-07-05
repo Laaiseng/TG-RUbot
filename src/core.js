@@ -278,10 +278,14 @@ export async function handleWebhook(request, ownerUid, botToken, secretToken, ch
     if ("/start" === message.text) {
       // Introduction words for various scenarios
       let introduction = "👋 *欢迎使用 LuDan AI 双向沟通机器人* 🤖" +
-          "\n💬 请直接发送消息，客服将在工作时间为您回复。⏰" +
+          "\n**>*💬 使用说明*" +
+          "\n>请直接发送消息，客服将在工作时间为您回复。" +
+          "\n>🙏 感谢您的耐心等待，我们会尽快处理您的问题。||" +
           "\n" +
-          "\n👋 *Welcome to LuDan AI Two\\-Way Communication Bot* 🤖" +
-          "\n💬 Just send your message and our support team will reply during working hours\\. ✨";
+          "\n👋 *Welcome to LuDan AI Two\\-Way Bot* 🤖" +
+          "\n**>*💬 How to use*" +
+          "\n>Just send your message and our support team will reply during working hours\\." +
+          "\n>🙏 Thanks for your patience, we'll get back to you soon\\.||";
       if (fromUser.id.toString() === ownerUid) {
         // for owner only
         introduction += "\n" +
